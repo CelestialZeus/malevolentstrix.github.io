@@ -31,7 +31,7 @@ function handleCellClick() {
         gameInProgress = false;
       } else {
         currentPlayer = aiPlayer;
-        handleAiTurn();
+          setTimeout(() => { handleAiTurn(); }, 1000);
       }
     }
   }
@@ -143,3 +143,32 @@ function calculateScore() {
     return 0;
   }
 }
+
+
+const singlePlayerBtn = document.querySelector('#singleplayer-btn');
+const multiplayerBtn = document.querySelector('#multiplayer-btn');
+const playerNames = document.querySelector('.player-names');
+const startBtn = document.querySelector('#start-btn');
+
+singlePlayerBtn.addEventListener('click', () => {
+  // start single player game
+  document.getElementById('singleplayer-btn').style.backgroundColor = "lightgreen";
+  document.getElementById('multiplayer-btn').style.backgroundColor = "#3E8E41";
+  console.log("semantic")
+  playerNames.classList.add('hidden');
+});
+
+multiplayerBtn.addEventListener('click', () => {
+  document.getElementById('multiplayer-btn').style.backgroundColor = "lightgreen";
+  document.getElementById('singleplayer-btn').style.backgroundColor = "#3E8E41";
+  mode = 0;
+  playerNames.classList.remove('hidden');
+});
+
+startBtn.addEventListener('click', () => {
+  const player1Name = document.querySelector('#player1').value;
+  const player2Name = document.querySelector('#player2').value;
+  // start multiplayer game with player names
+  playerNames.classList.add('hidden');
+
+});

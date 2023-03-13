@@ -1,0 +1,135 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+  
+  .board {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 300px;
+    margin-top: 2rem;
+    background-color: #eee;
+  }
+  
+  .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100px;
+    height: 100px;
+    font-size: 5rem;
+    font-weight: bold;
+    color: #444;
+    border: 2px solid #bbb;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .cell:hover {
+    background-color: #ddd;
+  }
+  
+  .cell.marked-x {
+    color: #2196f3;
+  }
+  
+  .cell.marked-o {
+    color: #ff5722;
+  }
+  
+  .reset-button {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    background-color: #2196f3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .reset-button:hover {
+    background-color: #0d47a1;
+  }
+  
+
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-top: 50px;
+    font-size: 3rem;
+    color: #333;
+  }
+  
+  .mode-buttons button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .mode-buttons button:hover {
+    background-color: #3E8E41;
+  }
+  
+  .player-names {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .player-names label {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  .player-names input {
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  .player-names button {
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .player-names button:hover {
+    background-color: #3E8E41;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
