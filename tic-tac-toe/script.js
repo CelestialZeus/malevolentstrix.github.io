@@ -1,19 +1,19 @@
-// Global variables
+
 let board = ["", "", "", "", "", "", "", "", ""];
 let currentPlayer = "X";
 let aiPlayer = "O";
 let humanPlayer = "X";
 let gameInProgress = true;
 
-// DOM elements
+
 const cells = document.querySelectorAll(".cell");
 
-// Event listeners
+
 cells.forEach((cell) => {
   cell.addEventListener("click", handleCellClick);
 });
 
-// Functions
+
 function handleCellClick() {
   if (gameInProgress) {
     const cellIndex = parseInt(this.getAttribute("id"));
@@ -31,7 +31,7 @@ function handleCellClick() {
         gameInProgress = false;
       } else {
         currentPlayer = aiPlayer;
-          setTimeout(() => { handleAiTurn(); }, 1000);
+        setTimeout(() => { handleAiTurn(); }, 1000);
       }
     }
   }
@@ -151,7 +151,7 @@ const playerNames = document.querySelector('.player-names');
 const startBtn = document.querySelector('#start-btn');
 
 singlePlayerBtn.addEventListener('click', () => {
-  // start single player game
+
   document.getElementById('singleplayer-btn').style.backgroundColor = "lightgreen";
   document.getElementById('multiplayer-btn').style.backgroundColor = "#3E8E41";
   console.log("semantic")
@@ -168,7 +168,7 @@ multiplayerBtn.addEventListener('click', () => {
 startBtn.addEventListener('click', () => {
   const player1Name = document.querySelector('#player1').value;
   const player2Name = document.querySelector('#player2').value;
-  // start multiplayer game with player names
+
   playerNames.classList.add('hidden');
 
 });

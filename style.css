@@ -1,0 +1,165 @@
+/* Add your custom styles here */
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(to right, #5C258D, #4389A2);
+    color: #fff;
+    padding: 100px 0;
+  }
+  
+  .hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+  }
+  
+  .hero-section p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+  }
+  
+  .hero-section .btn-primary {
+    background-color: #fff;
+    color: #5C258D;
+    border-color: #fff;
+  }
+  
+  /* Projects Section */
+  .projects-section {
+    padding: 100px 0;
+  }
+  
+  .projects-section h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+  
+  .projects-section p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+  }
+  
+  .projects-section .card {
+    margin-bottom: 30px;
+    border: none;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .projects-section .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2)
+}
+
+.projects-section .card img {
+height: 200px;
+object-fit: cover;
+}
+
+.projects-section .card-title {
+font-size: 2rem;
+font-weight: 700;
+margin-bottom: 20px;
+}
+
+.projects-section .card-text {
+font-size: 1.25rem;
+margin-bottom: 20px;
+}
+
+/* About Section */
+.about-section {
+padding: 100px 0;
+}
+
+.about-section h2 {
+font-size: 3.5rem;
+font-weight: 700;
+margin-bottom: 30px;
+}
+
+.about-section p {
+font-size: 1.25rem;
+margin-bottom: 30px;
+}
+
+/* Footer */
+.footer-section {
+background-color: #5C258D;
+color: #fff;
+padding: 30px 0;
+}
+
+.footer-section p {
+font-size: 1.25rem;
+margin-bottom: 0;
+}
+
+.footer-section a {
+color: #fff;
+}
+
+.footer-section a:hover {
+text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+.hero-section h1 {
+font-size: 2.5rem;
+}
+
+.hero-section p {
+font-size: 1.125rem;
+}
+
+.projects-section h2 {
+font-size: 2.5rem;
+}
+
+.projects-section .card-title {
+font-size: 1.5rem;
+}
+
+.projects-section .card-text {
+font-size: 1rem;
+}
+
+.about-section h2 {
+font-size: 2.5rem;
+}
+
+.about-section p {
+font-size: 1.125rem;
+}
+}
+
+@media (max-width: 767.98px) {
+.hero-section h1 {
+font-size: 2rem;
+}
+
+.hero-section p {
+font-size: 1rem;
+}
+
+.projects-section h2 {
+font-size: 2rem;
+}
+
+.projects-section .card-title {
+font-size: 1.25rem;
+}
+
+.projects-section .card-text {
+font-size: 0.875rem;
+}
+
+.about-section h2 {
+font-size: 2rem;
+}
+
+.about-section p {
+font-size: 1rem;
+}
+}
