@@ -1,6 +1,6 @@
-const cells = document.querySelectorAll("img");
+document.getElementById("nthing").addEventListener("click", myScript);
 
-
-cells.forEach((cell) => {
-  cell.addEventListener("click", handleCellClick);
-});
+function myScript() {
+    console.log("my script");
+    
+}

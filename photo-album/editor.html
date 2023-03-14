@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="editor.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+
+    </head>
+
+    
+    <body>
+        <header>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 col-md-8 col-sm-10 col-12 text-center">
+                        <h1>PHOTO EDITOR</h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+          <div class="row justify-content-center">
+              <div class="col-lg-6 col-md-8 col-sm-10 col-12">
+                  <center><u><h3>Original</h3></u></center>
+                  <img src="" class="img-fluid" id="edited-image"><br>
+              </div>
+              <div class="col-lg-6 col-md-8 col-sm-10 col-12">
+                <center><u><h3>Edited</h3></u></center>
+                  <canvas id="canvas" class="border"></canvas>
+              </div>
+          </div>
+          <div class="text-center justify-content-center">
+            <button id="download-btn">Download Image</button>
+          </div>
+      </div><br>
+      
+
+
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="colors" data-bs-toggle="tab" data-bs-target="#colors-pane" type="button" role="tab" aria-controls="colors-pane" aria-selected="true">Colors</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="tune" data-bs-toggle="tab" data-bs-target="#tune-pane" type="button" role="tab" aria-controls="tune-pane" aria-selected="false">Tune-Image</button>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="resolution" data-bs-toggle="tab" data-bs-target="#resolution-pane" type="button" role="tab" aria-controls="resolution-pane" aria-selected="false">Resolution</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="avatar" data-bs-toggle="tab" data-bs-target="#avatar-pane" type="button" role="tab" aria-controls="avatar-pane" aria-selected="false">Avatar</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="qrcode" data-bs-toggle="tab" data-bs-target="#qrcode-pane" type="button" role="tab" aria-controls="qrcode-pane" aria-selected="false">Qr-code</button>
+                </li>
+              </ul>
+                <br>
+
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="colors-pane" role="tabpanel" aria-labelledby="colors" tabindex="0">
+                      <div class="row justify-content-center text-center">
+                        <h3>Tint editor</h3>
+                        <button type="button" class="btn btn-primary" id="tint">Tint</button>
+                        <div class="col-lg-6 col-md-8 col-sm-10 col-12 d-flex flex-column justify-content-center align-items-center">
+                            <div>                        
+                            <button type="button" class="btn btn-primary" id="red">Red</button>
+                            <button type="button" class="btn btn-primary" id="green">Green</button>
+                            <button type="button" class="btn btn-primary" id="blue">Blue</button>
+                            <button type="button" class="btn btn-primary" id="reset-tint">Reset</button>
+                            </div><br>
+                            
+                          <label for="tint-color">Choose a custom tint:</label>
+                          <input type="color" class="form-control form-control-color" id="tint-color" value="#563d7c">
+                        </div>
+                      </div>
+                    </div>
+                  
+
+
+                    <div class="tab-pane fade text-center" id="tune-pane" role="tabpanel" aria-labelledby="tune" tabindex="0" >
+                      <div class="slider-row">
+                        <div class="mx-2">
+                          <label for="brightness-slider">Brightness:</label>
+                          <input type="range" min="-100" max="100" value="0" id="brightness-slider">
+                          <span id="brightness-value">0</span>
+                        </div>
+                        <div class="mx-2">
+                          <label for="contrast-slider">Contrast:</label>
+                          <input type="range" min="-100" max="100" value="0" id="contrast-slider">
+                          <span id="contrast-value">0</span>
+                        </div>
+                        <div class="mx-2">
+                          <label for="saturation-slider">Saturation:</label>
+                          <input type="range" min="-100" max="100" value="0" id="saturation-slider">
+                          <span id="saturation-value">0</span>
+                        </div>
+                      </div>
+                      <div class="slider-row">
+                        <div class="mx-2">
+                          <label for="grayscale-slider">Grayscale:</label>
+                          <input type="range" min="0" max="100" value="0" id="grayscale-slider">
+                          <span id="grayscale-value">0</span>
+                        </div>
+                        <div class="mx-2">
+                          <label for="hue-slider">Hue:</label>
+                          <input type="range" min="-180" max="180" value="0" id="hue-slider">
+                          <span id="hue-value">0</span>
+                        </div>
+                        <div class="mx-2">
+                          <label for="invert-slider">Invert:</label>
+                          <input type="range" min="0" max="100" value="0" id="invert-slider">
+                          <span id="invert-value">0</span>
+                        </div>
+                      </div>
+                      <div class="slider-row">
+                        <div class="mx-2">
+                          <label for="sepia-slider">Sepia:</label>
+                          <input type="range" min="0" max="100" value="0" id="sepia-slider">
+                          <span id="sepia-value">0</span>
+                        </div>
+                        <div class="mx-2">
+                          <label for="blur-slider">Blur:</label>
+                          <input type="range" min="0" max="100"  value="0" id="blur-slider">
+                          <span id="blur-value">0</span>
+                        </div>
+                      </div>
+                      
+                      <div class="text-center justify-content-center">
+                        <button type="button" class="btn btn-primary" id="reset-tune">Reset</button>
+                      </div>
+                    </div>
+                    
+                    
+                        
+                <div class="tab-pane fade" id="resolution-pane" role="tabpanel" aria-labelledby="resolution" tabindex="0">
+
+                  <div class="d-flex justify-content-center">
+                    <label for="width">Width :</label>
+                    <input type="number" id="width" min="1" max="3000" step="1" value="500">
+                  
+                    <label for="height">Height :</label>
+                    <input type="number" id="height" min="1" max="3000" step="1" value="500">
+
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary" onclick="changeResolution()">Change resolution</button>
+                    <button type="button" class="btn btn-primary" id='reset-btn' >Reset</button>
+                  </div>
+                </div>
+                
+
+                <div class="tab-pane fade text-center" id="qrcode-pane" role="tabpanel" aria-labelledby="qrcode" tabindex="0">
+                  <div class="justify-content-center">
+                    <button type="button" class="btn btn-primary" id="generate-qr-btn">Generate QR Code</button><hr>
+                    <canvas id="qr-canvas"></canvas>
+                  </div>
+                </div>
+
+                <div class="tab-pane fade text-center" id="avatar-pane" role="tabpanel" aria-labelledby="avatar" tabindex="0">
+                  <div class="justify-content-center">
+                    <button type="button" class="btn btn-primary" id="avatar-btn">Generate Avatar</button><hr>
+                     <canvas id="avatar-canvas" width="100" height="100"></canvas>
+                </div>
+                
+              </div>
+            </div>
+        <script>
+        const params = new URLSearchParams(window.location.search);
+        const imageSrc = params.get('src');
+        const editedImage = document.getElementById('edited-image');
+        editedImage.src = decodeURIComponent(imageSrc);
+
+        
+        </script>
+
+        <script src="editor.js"></script>
+    </body>
+    
+</html>
