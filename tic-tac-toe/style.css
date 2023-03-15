@@ -9,6 +9,10 @@
     margin-top: 1rem;
     margin-bottom: 0;
   }
+
+  body{
+    background-color: black;
+  }
   
   .board {
     display: flex;
@@ -16,7 +20,7 @@
     width: 300px;
     height: 300px;
     margin-top: 2rem;
-    background-color: #eee;
+    background-color: black;
   }
   
   .cell {
@@ -72,7 +76,7 @@
   h1 {
     margin-top: 50px;
     font-size: 3rem;
-    color: #333;
+    color: #ffffff;
   }
   
   .mode-buttons button {
@@ -132,4 +136,5 @@
   .hidden {
     display: none;
   }
+  
   
