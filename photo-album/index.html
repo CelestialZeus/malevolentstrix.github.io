@@ -5,60 +5,222 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Photo Album</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href=
+    "https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href=
+    "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      
+      <!-- Import custom stylesheet -->
+      <link rel="stylesheet" href="editor.css">
+    
+      <!-- Compiled and minified JavaScript -->
+      <script defer src=
+    "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+      </script>
   </head>
   <body>
     <div id="my-image">
       <img src="../assets/Photo Album.gif" alt="Your Image" />
     </div>
-    <div class="photo-album">
-      <img
-        src="https://images.pexels.com/photos/15286/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-        alt="Photo 1"
-      />
-
-      <img
-        src="https://images.pexels.com/photos/5527317/pexels-photo-5527317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-        alt="Photo 2"
-      />
-      <img
-        src="https://images.pexels.com/photos/640781/pexels-photo-640781.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-        alt="Photo 3"
-      />
-      <img
-        src="https://images.pexels.com/photos/1367192/pexels-photo-1367192.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-        alt="Photo 4"
-      />
-      <img
-        src="https://images.pexels.com/photos/2582548/pexels-photo-2582548.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-        alt="Photo 5"
-      />
-      <img
-        src="https://images.pexels.com/photos/2582624/pexels-photo-2582624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-        alt="Photo 6"
-      />
-      <img
-        src="https://images.pexels.com/photos/2990846/pexels-photo-2990846.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-        alt="Photo 7"
-      />
-      <img
-        src="https://images.pexels.com/photos/3374454/pexels-photo-3374454.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-        alt="Photo 8"
-      />
-
-      <img
-        src="https://images.pexels.com/photos/3179738/pexels-photo-3179738.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
-        alt="Photo 9"
-      />
-      <img
-        src="https://images.pexels.com/photos/2884498/pexels-photo-2884498.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-        alt="Photo 10"
-      />
-
-      <img
-        src="https://images.pexels.com/photos/2592884/pexels-photo-2592884.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-        alt="Photo 11"
-      />
+    <div id="photo-album">
+      <div class="individualphoto">
+        <img
+          src="https://images.pexels.com/photos/15286/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="Photo 1"
+        />
+      </div>
+      <div class="individualphoto">
+        <img
+          src="https://images.pexels.com/photos/5527317/pexels-photo-5527317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="Photo 2"
+        />
+      </div>
+      <div class="individualphoto">
+        <img
+          src="https://images.pexels.com/photos/640781/pexels-photo-640781.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="Photo 3"
+        />
+      </div>
+      <div class="individualphoto">
+        <img
+          src="https://images.pexels.com/photos/1367192/pexels-photo-1367192.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="Photo 4"
+        />
+      </div>
+      <div class="individualphoto">
+        <img
+          src="https://images.pexels.com/photos/2582548/pexels-photo-2582548.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="Photo 5"
+        />
+      </div>
+      <div class="individualphoto">
+        <img
+          src="https://images.pexels.com/photos/2582624/pexels-photo-2582624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="Photo 6"
+        />
+      </div>
+      <div class="individualphoto">
+        <img
+          src="https://images.pexels.com/photos/2990846/pexels-photo-2990846.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="Photo 7"
+        />
+      </div>
+      <div class="individualphoto">
+        <img
+          src="https://images.pexels.com/photos/3374454/pexels-photo-3374454.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="Photo 8"
+        />
+      </div>
+      <div class="individualphoto">
+        <img
+          src="https://images.pexels.com/photos/3179738/pexels-photo-3179738.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+          alt="Photo 9"
+        />
+      </div>
+      <div class="individualphoto">
+        <img
+          src="https://images.pexels.com/photos/2884498/pexels-photo-2884498.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="Photo 10"
+        />
+      </div>
+      <div class="individualphoto">
+        <img
+          src="https://images.pexels.com/photos/2592884/pexels-photo-2592884.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="Photo 11"
+        />
+      </div>
     </div>
+
+
+
+    <!-- New Script -->
+
+  <div id="editorpane">
+
+<img id="sourceImage" crossorigin="anonymous">
+
+<div class="image-preview">
+
+  <canvas id="canvas" height="0"></canvas>
+</div>
+<div class="container app">
+
+
+  <div class="image-controls">
+    <h6>Image Controls</h6>
+    <div class="row">
+      <div class="col s6">
+        <span class="range-field">
+          <label for="brightnessSlider">
+          Brightness
+          </label>
+          <input id="brightnessSlider"
+            type="range" value="100"
+            min="0" max="300"
+            onchange="applyFilter()">
+        </span>
+      </div>
+      <div class="col s6">
+        <span class="range-field">
+          <label for="contrastSlider">
+          Contrast
+          </label>
+          <input id="contrastSlider"
+            type="range" value="100"
+            min="0" max="200"
+            onchange="applyFilter()">
+        </span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s6">
+        <span class="range-field">
+          <label for="grayscaleSlider">
+          Grayscale
+          </label>
+          <input id="grayscaleSlider"
+            type="range" value="0"
+            min="0" max="100"
+            onchange="applyFilter()">
+        </span>
+      </div>
+      <div class="col s6">
+        <span class="range-field">
+          <label for="saturationSlider">
+          Saturation
+          </label>
+          <input id="saturationSlider"
+            type="range" value="100"
+            min="0" max="300"
+            onchange="applyFilter()">
+        </span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s6">
+        <span class="range-field">
+          <label for="sepiaSlider">
+          Sepia
+          </label>
+          <input id="sepiaSlider"
+            type="range" value="0"
+            min="0" max="200"
+            onchange="applyFilter()">
+        </span>
+      </div>
+      <div class="col s6">
+        <span class="range-field">
+          <label for="hueRotateSlider">
+          Hue
+          </label>
+          <input id="hueRotateSlider"
+            type="range" value="0"
+            min="0" max="360"
+            onchange="applyFilter()">
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="preset-filters">
+    <h6>Preset Filters</h6>
+    <div class="buttonstylemaker"
+        onclick="brightenFilter()">
+    Brighten
+    </div>
+    <div class="buttonstylemaker"
+        onclick="bwFilter()">
+    Black and White
+          </div>
+    <div class="buttonstylemaker"
+        onclick="funkyFilter()">
+    Funky
+          </div>
+    <div class="buttonstylemaker"
+        onclick="vintageFilter()">
+    Vintage
+          </div>
+  </div>
+
+  <ul class="center image-save">
+    <button class="btn btn-flat blue white-text"
+        onclick="saveImage()">
+    Save
+    </button>
+    <button class="btn btn-flat red white-text"
+        onclick="resetImage()">
+    Reset
+    </button>
+  </ul>
+</div>
+
+<!-- end -->
+
     <script type="text/javascript" src="./script.js"></script>
   </body>
 </html>
