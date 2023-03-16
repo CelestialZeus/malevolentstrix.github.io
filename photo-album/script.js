@@ -13,8 +13,6 @@ let sepiaSlider = document.getElementById("sepiaSlider");
 
 
 function myScript() {
-    console.log("myScript called")
-    console.log(this.getElementsByTagName("img")[0].src);
     imagelink = this.getElementsByTagName("img")[0].src;
 
     fetch(imagelink)
@@ -26,8 +24,8 @@ function myScript() {
 
     image.onload = function () {
 
-        canvas.width = this.width;
-        canvas.height = this.height;
+        canvas.width = image.width;
+        canvas.height = image.height;
         canvas.crossOrigin = "anonymous";
         applyFilter();
     };
