@@ -5,20 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Photo Album</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="stylesheet" href=
-    "https://fonts.googleapis.com/icon?family=Material+Icons">
-    
-      <!-- Compiled and minified CSS -->
-      <link rel="stylesheet" href=
-    "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-      
-      <!-- Import custom stylesheet -->
-      <link rel="stylesheet" href="editor.css">
-    
-      <!-- Compiled and minified JavaScript -->
-      <script defer src=
-    "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
-      </script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <!-- Import custom stylesheet -->
+    <link rel="stylesheet" href="editor.css" />
+
+    <!-- Compiled and minified JavaScript -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+    ></script>
   </head>
   <body>
     <div id="my-image">
@@ -93,134 +98,173 @@
       </div>
     </div>
 
-
-
     <!-- New Script -->
-<div id = "editorpane">
-  <div id = "sourceandresult">
-<img id="sourceImage" crossorigin="anonymous">
+    <div id="editorpane">
+      <div id="sourceandresult">
+        <img id="sourceImage" crossorigin="anonymous" />
 
-<div class="image-preview">
-
-  <canvas id="canvas" height="0"></canvas>
-</div>
-  </div>
-<div class="container app">
-
-
-  <div class="image-controls">
-    <h6>Image Controls</h6>
-    <div class="row">
-      <div class="col s6">
-        <span class="range-field">
-          <label for="brightnessSlider">
-          Brightness
-          </label>
-          <input id="brightnessSlider"
-            type="range" value="100"
-            min="0" max="300"
-            onchange="applyFilter()">
-        </span>
+        <canvas id="canvas" height="0"></canvas>
       </div>
-      <div class="col s6">
-        <span class="range-field">
-          <label for="contrastSlider">
-          Contrast
-          </label>
-          <input id="contrastSlider"
-            type="range" value="100"
-            min="0" max="200"
-            onchange="applyFilter()">
-        </span>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col s6">
-        <span class="range-field">
-          <label for="grayscaleSlider">
-          Grayscale
-          </label>
-          <input id="grayscaleSlider"
-            type="range" value="0"
-            min="0" max="100"
-            onchange="applyFilter()">
-        </span>
-      </div>
-      <div class="col s6">
-        <span class="range-field">
-          <label for="saturationSlider">
-          Saturation
-          </label>
-          <input id="saturationSlider"
-            type="range" value="100"
-            min="0" max="300"
-            onchange="applyFilter()">
-        </span>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col s6">
-        <span class="range-field">
-          <label for="sepiaSlider">
-          Sepia
-          </label>
-          <input id="sepiaSlider"
-            type="range" value="0"
-            min="0" max="200"
-            onchange="applyFilter()">
-        </span>
-      </div>
-      <div class="col s6">
-        <span class="range-field">
-          <label for="hueRotateSlider">
-          Hue
-          </label>
-          <input id="hueRotateSlider"
-            type="range" value="0"
-            min="0" max="360"
-            onchange="applyFilter()">
-        </span>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="preset-filters">
-    <h6>Preset Filters</h6>
-    <div class="buttonstylemaker"
-        onclick="brightenFilter()">
-    Brighten
-    </div>
-    <div class="buttonstylemaker"
-        onclick="bwFilter()">
-    Black and White
+      <div class="container app">
+        <div class="image-controls">
+          <h6
+            style="
+              color: aliceblue;
+              text-align: center;
+              text-decoration: underline;
+            "
+          >
+            Image Controls
+          </h6>
+          <div class="row">
+            <div class="col s6">
+              <span class="range-field">
+                <label style="color: aliceblue" for="brightnessSlider">
+                  Brightness
+                </label>
+                <input
+                  id="brightnessSlider"
+                  type="range"
+                  value="100"
+                  min="0"
+                  max="300"
+                  onchange="applyFilter()"
+                />
+              </span>
+            </div>
+            <div class="col s6">
+              <span class="range-field">
+                <label style="color: aliceblue" for="contrastSlider">
+                  Contrast
+                </label>
+                <input
+                  id="contrastSlider"
+                  type="range"
+                  value="100"
+                  min="0"
+                  max="200"
+                  onchange="applyFilter()"
+                />
+              </span>
+            </div>
           </div>
-    <div class="buttonstylemaker"
-        onclick="funkyFilter()">
-    Funky
-          </div>
-    <div class="buttonstylemaker"
-        onclick="vintageFilter()">
-    Vintage
-          </div>
-  </div>
 
-  <ul class="center image-save">
-    <button class="btn btn-flat blue white-text"
-        onclick="saveImage()">
-    Save
-    </button>
-    <button class="btn btn-flat red white-text"
-        onclick="resetImage()">
-    Reset
-    </button>
-  </ul>
-</div>
-</div>
-<!-- end -->
+          <div class="row">
+            <div class="col s6">
+              <span class="range-field">
+                <label style="color: aliceblue" for="grayscaleSlider">
+                  Grayscale
+                </label>
+                <input
+                  id="grayscaleSlider"
+                  type="range"
+                  value="0"
+                  min="0"
+                  max="100"
+                  onchange="applyFilter()"
+                />
+              </span>
+            </div>
+            <div class="col s6">
+              <span class="range-field">
+                <label style="color: aliceblue" for="saturationSlider">
+                  Saturation
+                </label>
+                <input
+                  id="saturationSlider"
+                  type="range"
+                  value="100"
+                  min="0"
+                  max="300"
+                  onchange="applyFilter()"
+                />
+              </span>
+            </div>
+          </div>
 
+          <div class="row">
+            <div class="col s6">
+              <span class="range-field">
+                <label style="color: aliceblue" for="sepiaSlider">
+                  Sepia
+                </label>
+                <input
+                  id="sepiaSlider"
+                  type="range"
+                  value="0"
+                  min="0"
+                  max="200"
+                  onchange="applyFilter()"
+                />
+              </span>
+            </div>
+            <div class="col s6">
+              <span class="range-field">
+                <label style="color: aliceblue" for="hueRotateSlider">
+                  Hue
+                </label>
+                <input
+                  id="hueRotateSlider"
+                  type="range"
+                  value="0"
+                  min="0"
+                  max="360"
+                  onchange="applyFilter()"
+                />
+              </span>
+            </div>
+          </div>
+        </div>
+        <div id="buttonmods">
+          <h6
+            style="
+              text-decoration: underline;
+              color: aliceblue;
+              text-align: center;
+            "
+          >
+            Modes
+          </h6>
+
+          <div class="preset-filters">
+            <div class="buttonstylemaker" onclick="brightenFilter()">
+              Brighten
+            </div>
+            <div class="buttonstylemaker" onclick="bwFilter()">
+              Black and White
+            </div>
+            <div class="buttonstylemaker" onclick="reddenFilter()">Redden</div>
+            <div class="buttonstylemaker" onclick="vintageFilter()">
+              Vintage
+            </div>
+          </div>
+          <a id="link"></a>
+        </div>
+        <div class="imgsave">
+          <div id="saveimg" onclick="previewImage()">Go to final preview</div>
+          <div id="resetimg" onclick="resetImage()">Reset</div>
+        </div>
+
+        
+      </div>
+    </div>
+    <div id="previewimgs">
+      <div class="editpre">
+      <img id="sio">
+      <h5 style="font-weight: bold;">Original Image</h5>
+      </div>
+      <div class="editpre">
+      <img id="si" crossorigin="anonymous" />
+      <h5 style="font-weight: bold;">Edited Image</h5>
+
+
+      </div>
+    </div>
+    <div id="download">
+      <div id="imagedw" onclick="saveImage()">Download</div>
+      <div id="imagesa" style="background-color: aliceblue !important;" onclick="back()">Back</div>
+
+    </div>
     <script type="text/javascript" src="./script.js"></script>
   </body>
 </html>

@@ -2,6 +2,8 @@
 var imagelink = ""
 
 let image = document.getElementById('sourceImage');
+let image3 = document.getElementById('sio');
+let image2 = document.getElementById('si');
 let canvas = document.getElementById('canvas');
 let context = canvas.getContext('2d');
 let brightnessSlider = document.getElementById("brightnessSlider");
@@ -12,6 +14,7 @@ let saturateSlider = document.getElementById("saturationSlider");
 let sepiaSlider = document.getElementById("sepiaSlider");
 
 
+
 function myScript() {
     imagelink = this.getElementsByTagName("img")[0].src;
 
@@ -19,26 +22,25 @@ function myScript() {
     .then(res => res.blob()) 
         .then(blob => {
             image.src = URL.createObjectURL(blob);
-            console.log(event.target.files)
         })
 
     image.onload = function () {
 
-        canvas.width = image.width;
-        canvas.height = image.height;
+        canvas.width = this.width;
+        canvas.height = this.height;
         canvas.crossOrigin = "anonymous";
         applyFilter();
     };
 
-    document.querySelector('.image-save').style.display = "block";
+    document.querySelector('.imgsave').style.display = "flex";
+    document.querySelector('#editorpane').style.display = "block";
+    document.querySelector('.imgsave').style.flexDirection = "row";
     document.querySelector('.image-controls').style.display = "block";
     document.querySelector('.preset-filters').style.display = "flex";
     document.querySelector('.preset-filters').style.flexDirection = "row";
     document.getElementById('photo-album').style.display = "none";
-
+    
 }
-
-
 
 function applyFilter() {
 
@@ -105,7 +107,7 @@ function saveImage() {
 
     let linkElement = document.getElementById('link');
     linkElement.setAttribute(
-        'download', 'edited_image.png'
+        'download', 'edit.png'
     );
     let canvasData = canvas.toDataURL("image/png")
     canvasData.replace(
@@ -113,6 +115,34 @@ function saveImage() {
     )
     linkElement.setAttribute('href', canvasData);
     linkElement.click();
+    
+}
+
+function previewImage() { 
+    document.querySelector('.imgsave').style.display = "none";
+    document.querySelector('#editorpane').style.display = "none";
+    document.querySelector('.image-controls').style.display = "none";
+    document.querySelector('.preset-filters').style.display = "none";
+    document.querySelector('#photo-album').style.display = "none";
+    document.querySelector('#previewimgs').style.display = "flex";
+    document.querySelector('#download').style.display = "flex";
+    image3.src = image.src;
+    image2.src = canvas.toDataURL("image/png");
+
+
+}
+
+
+function back() {
+    document.querySelector('.imgsave').style.display = "flex";
+    document.querySelector('#editorpane').style.display = "block";
+    document.querySelector('.imgsave').style.flexDirection = "row";
+    document.querySelector('.image-controls').style.display = "block";
+    document.querySelector('.preset-filters').style.display = "flex";
+    document.querySelector('.preset-filters').style.flexDirection = "row";
+    document.getElementById('photo-album').style.display = "none";
+    document.querySelector('#previewimgs').style.display = "none";
+    document.querySelector('#download').style.display = "none";
 }
 
 

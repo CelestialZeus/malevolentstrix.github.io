@@ -21,6 +21,7 @@ body {
   grid-gap: 20px;
   margin: 20px auto;
   max-width: 90%;
+  z-index: 2;
 }
 
 @media (min-width: 576px) {
@@ -53,47 +54,138 @@ body {
 }
 
 .buttonstylemaker {
-  border-style: solid;
-  background-color: aqua;
+  border-radius: 20px;
+  background-color: rgb(142, 240, 186);
   width: auto;
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
   height: auto;
 }
 
-
-
 .image-controls,
-.image-save,
+.imgsave,
+#download,
+#editorpane,
+#previewimgs,
 .preset-filters {
   display: none;
+}
 
+.imgsave {
+  justify-content: center;
+  margin: 15px;
+}
+
+.preset-filters {
+  align-items: center;
+  justify-content: center;
+}
+
+.image-controls {
+  margin: 20px;
+  padding: 10px;
+  background-color: black;
+  border-radius: 20px;
+  border-style: dashed;
 }
 
 #canvas {
-
   max-height: 420px;
   margin-left: 20px;
 }
 
-#sourceImage
-{
-  max-height: 420px;
-  object-fit: contain;
-  margin-right: 20px;
+#sourceImage {
+  display: none;
 }
 
 #sourceandresult {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   margin-top: 20px;
 }
 
 #editorpane {
   border-style: solid;
-  margin: 50px;
+  margin-left: 200px;
+  margin-right: 200px;
   padding: 50px;
+  margin-bottom: 50px;
   border-radius: 30px;
-  background-color:  rgba(31, 29, 29, 0.5);
+  background-color: rgba(31, 29, 29, 0.5);
+}
 
+#saveimg {
+  background-color: rgb(45, 207, 212);
+  padding: 10px;
+  margin: 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
 
+#resetimg {
+  background-color: red;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 15px;
+  cursor: pointer;
+}
+
+#buttonmods {
+  background-color: rgb(0, 0, 0);
+  padding: 10px;
+  border-radius: 20px;
+  width: auto;
+  margin-left:200px;
+  margin-right: 200px;
+  align-items: center;
+}
+
+#previewimgs {
+  justify-content: center;
+  width: auto;
+  background-color: aliceblue;
+  border-radius: 20px;
+  margin-right: 170px;
+  margin-bottom: 30px;
+  margin-left: 170px;
+  
+}
+
+#sio,
+#si {
+  margin: 20px;
+  width: auto;
+  height: 470px;
+}
+
+#imagesa,
+#imagedw {
+
+  margin: 15px;
+  background-color: rgb(43, 231, 68);
+  border-radius: 20px;
+  padding: 10px;
+  margin: 15px;
+
+  cursor: pointer;
+}
+
+#download {
+  flex-direction: row;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 50px;
+  margin-left: 500px;
+  margin-right: 500px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.editpre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 10px;  
+  margin-bottom: 20px;
 }
