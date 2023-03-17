@@ -233,7 +233,10 @@
             <div class="buttonstylemaker" onclick="bwFilter()">
               Black and White
             </div>
-            <div class="buttonstylemaker" onclick="reddenFilter()">Redden</div>
+            <div class="buttonstylemaker" onclick="reddenFilter()">Reddish</div>
+            <div class="buttonstylemaker" onclick="greenFilter()">Greenish</div>
+            <div class="buttonstylemaker" onclick="blueFilter()">Bluish</div>
+
             <div class="buttonstylemaker" onclick="vintageFilter()">
               Vintage
             </div>
@@ -244,26 +247,27 @@
           <div id="saveimg" onclick="previewImage()">Go to final preview</div>
           <div id="resetimg" onclick="resetImage()">Reset</div>
         </div>
-
-        
       </div>
     </div>
     <div id="previewimgs">
       <div class="editpre">
-      <img id="sio">
-      <h5 style="font-weight: bold;">Original Image</h5>
+        <img id="sio" />
+        <h5 style="font-weight: bold">Original Image</h5>
       </div>
       <div class="editpre">
-      <img id="si" crossorigin="anonymous" />
-      <h5 style="font-weight: bold;">Edited Image</h5>
-
-
+        <img id="si" crossorigin="anonymous" />
+        <h5 style="font-weight: bold">Edited Image</h5>
       </div>
     </div>
     <div id="download">
       <div id="imagedw" onclick="saveImage()">Download</div>
-      <div id="imagesa" style="background-color: aliceblue !important;" onclick="back()">Back</div>
-
+      <div
+        id="imagesa"
+        style="background-color: aliceblue !important"
+        onclick="back()"
+      >
+        Back
+      </div>
     </div>
     <script type="text/javascript" src="./script.js"></script>
   </body>

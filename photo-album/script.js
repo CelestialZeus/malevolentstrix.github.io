@@ -19,7 +19,7 @@ function myScript() {
     imagelink = this.getElementsByTagName("img")[0].src;
 
     fetch(imagelink)
-    .then(res => res.blob()) 
+        .then(res => res.blob())
         .then(blob => {
             image.src = URL.createObjectURL(blob);
         })
@@ -39,6 +39,10 @@ function myScript() {
     document.querySelector('.preset-filters').style.display = "flex";
     document.querySelector('.preset-filters').style.flexDirection = "row";
     document.getElementById('photo-album').style.display = "none";
+
+}
+
+function myScriptforhover() {
     
 }
 
@@ -75,13 +79,25 @@ function bwFilter() {
     applyFilter();
 }
 
-function funkyFilter() {
+function reddenFilter() {
     resetImage();
 
 
-    hueRotateSlider.value =
-        Math.floor(Math.random() * 360) + 1;
-    contrastSlider.value = 120;
+    hueRotateSlider.value = 270;
+    applyFilter();
+}
+function greenFilter() {
+    resetImage();
+
+
+    hueRotateSlider.value = 90;
+    applyFilter();
+}
+function blueFilter() {
+    resetImage();
+
+
+    hueRotateSlider.value = 180;
     applyFilter();
 }
 
@@ -115,10 +131,10 @@ function saveImage() {
     )
     linkElement.setAttribute('href', canvasData);
     linkElement.click();
-    
+
 }
 
-function previewImage() { 
+function previewImage() {
     document.querySelector('.imgsave').style.display = "none";
     document.querySelector('#editorpane').style.display = "none";
     document.querySelector('.image-controls').style.display = "none";
@@ -149,5 +165,6 @@ function back() {
 const cells = document.querySelectorAll(".individualphoto");
 cells.forEach((cell) => {
     cell.addEventListener("click", myScript);
+    cell.addEventListener("hover", myScriptforhover);
 });
-  
+
