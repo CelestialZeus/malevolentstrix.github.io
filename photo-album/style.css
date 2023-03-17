@@ -143,13 +143,12 @@ body {
 
 #previewimgs {
   justify-content: center;
-  width: auto;
+  width: 1550px;
   background-color: aliceblue;
   border-radius: 20px;
-  margin-right: 170px;
   margin-bottom: 30px;
-  margin-left: 170px;
-  
+  margin-left: 150px;
+  margin-right: 200px;
 }
 
 #sio,
