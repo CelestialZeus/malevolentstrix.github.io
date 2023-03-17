@@ -143,19 +143,19 @@ body {
 
 #previewimgs {
   justify-content: center;
-  width: 1550px;
+  width: 1050px;
   background-color: aliceblue;
   border-radius: 20px;
   margin-bottom: 30px;
-  margin-left: 150px;
-  margin-right: 200px;
+  margin-left: 450px;
+  margin-right: 450px;
 }
 
 #sio,
 #si {
   margin: 20px;
   width: auto;
-  height: 470px;
+  height: 300px;
 }
 
 #imagesa,
