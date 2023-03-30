@@ -147,8 +147,8 @@ body {
   background-color: aliceblue;
   border-radius: 20px;
   margin-bottom: 30px;
-  margin-left: 450px;
-  margin-right: 450px;
+  margin-left: auto;
+  margin-right: auto
 }
 
 #sio,
